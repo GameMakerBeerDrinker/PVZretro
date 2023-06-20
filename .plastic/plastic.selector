@@ -1,0 +1,4 @@
+repository "PVZretro@beerdrinker@cloud.cn"
+  path "/"
+    br "/main"
+    co "/main"
