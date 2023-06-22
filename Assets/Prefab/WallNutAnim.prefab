@@ -222,7 +222,7 @@ MonoBehaviour:
   nextRandomPos: {x: 0, y: 0, z: 0}
   eyeYScale: 1
   speed: 1
-  shield: {fileID: 0}
+  shield: {fileID: 6101926877384227087}
   core: {fileID: 5991158971005897433}
   maxHp: 100
   curHp: 71

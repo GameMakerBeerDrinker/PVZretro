@@ -104,7 +104,7 @@ MonoBehaviour:
   cost: 50
   maxHealth: 4000
   isTakingDamage: 0
-  walNutAnim: {fileID: 0}
+  walNutAnim: {fileID: 2914381706453456444}
 --- !u!50 &1994043261920070233
 Rigidbody2D:
   serializedVersion: 4
@@ -159,9 +159,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 732650031637416875}
     m_Modifications:
+    - target: {fileID: 5991158969551629269, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 5991158970014730892, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5991158970014730892, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -2047702965
+      objectReference: {fileID: 0}
+    - target: {fileID: 5991158970014730892, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 5991158970436531832, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5991158970436531832, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5991158970436531832, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5991158970436531832, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5991158970436531832, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
       propertyPath: m_LocalPosition.x
@@ -207,8 +235,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallNutAnim
       objectReference: {fileID: 0}
+    - target: {fileID: 5991158970631229067, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5991158970631229067, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -2047702965
+      objectReference: {fileID: 0}
+    - target: {fileID: 5991158970631229067, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 5991158971005897433, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5991158971005897433, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -2047702965
+      objectReference: {fileID: 0}
+    - target: {fileID: 5991158971005897438, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101926877384227087, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
+--- !u!114 &2914381706453456444 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5991158970436531835, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
+  m_PrefabInstance: {fileID: 8887055549394165831}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b2da99dfa9ea054e8e5fae0e3cf29ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2914381706453456447 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5991158970436531832, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
