@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2375907791602018978}
   - component: {fileID: 6468460344399077802}
   - component: {fileID: 7083725177263471895}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pea
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -73,11 +73,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -991891573
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.2003932, a: 1}
+  m_Color: {r: 0.020914912, g: 0.8867924, b: 0.18777458, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -126,6 +126,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2375907791602018979}
     m_Modifications:
+    - target: {fileID: 523965617315299833, guid: d916dc17711b1f84db78ed5e7a064163, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670748468187143828, guid: d916dc17711b1f84db78ed5e7a064163, type: 3}
+      propertyPath: m_Color.b
+      value: 0.16048108
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670748468187143828, guid: d916dc17711b1f84db78ed5e7a064163, type: 3}
+      propertyPath: m_Color.g
+      value: 0.754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670748468187143828, guid: d916dc17711b1f84db78ed5e7a064163, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4670748468187143829, guid: d916dc17711b1f84db78ed5e7a064163, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -189,6 +205,10 @@ PrefabInstance:
     - target: {fileID: 4670748468187143831, guid: d916dc17711b1f84db78ed5e7a064163, type: 3}
       propertyPath: m_Name
       value: Pea
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670748468187143831, guid: d916dc17711b1f84db78ed5e7a064163, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d916dc17711b1f84db78ed5e7a064163, type: 3}

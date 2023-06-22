@@ -48,7 +48,7 @@ public abstract class Shooter : Plant
             //僵尸在屏幕内&&僵尸与射手同行&&僵尸位置在射手右方
             if (Mathf.Abs(view.x) < 1 && Mathf.Abs(view.y) < 1 && Mathf.Abs(zombie.transform.position.y - transform.position.y) < GameManager.instance.tilemap.cellSize.y/2 && zombie.transform.position.x > bulletPosition.transform.position.x) 
             {
-                peaShooterAnim.SetShootingTrue();
+                //peaShooterAnim.SetShootingTrue();
                 return true;
             }
         }
@@ -69,6 +69,7 @@ public abstract class Shooter : Plant
 
     protected void GenerateBullet()
     {
+        peaShooterAnim.SetShootingTrue();
         Instantiate(bullet, bulletPosition.transform.position, Quaternion.Euler(0, 0, 0)).GetComponent<DirectBullet>().direction=shootDirection;
     }
 

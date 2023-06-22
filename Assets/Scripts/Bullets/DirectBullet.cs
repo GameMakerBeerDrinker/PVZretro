@@ -16,7 +16,7 @@ public abstract class DirectBullet : MonoBehaviour
     {
         Move();
         Vector3 view = Camera.main.WorldToViewportPoint(transform.position);
-        if (Mathf.Abs(view.x) > 1 && Mathf.Abs(view.y) > 1) 
+        if (transform.position.x>ZombieManager.instance.transform.position.x) 
         {
             Destroy(gameObject);
         }

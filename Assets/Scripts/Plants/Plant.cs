@@ -23,7 +23,7 @@ public abstract class Plant : MonoBehaviour
     public int maxHealth;
     protected int currentHealth;
 
-
+    public bool isTakingDamage;
 
     protected void Start()
     {
@@ -36,10 +36,10 @@ public abstract class Plant : MonoBehaviour
         //Debug.Log(currentHealth);
     }
 
-    public void TakeDamage(int damage)
+    public virtual void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        Debug.Log(currentHealth);
+        //Debug.Log(currentHealth);
         if (currentHealth <= 0)
             Die();
     }

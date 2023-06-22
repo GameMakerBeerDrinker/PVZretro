@@ -6,6 +6,8 @@ public class PotatoMine : Plant
 {
     protected Collider2D explodeArea;
 
+    public _Scripts.PotMineAnim potMineAnim;
+
     public int prepareTime;
     protected int prepareTimer;
 
@@ -42,6 +44,7 @@ public class PotatoMine : Plant
 
     private void ReadyToExplode()
     {
+        potMineAnim.GetReady();
         readyToExplode = true;
     }
 
@@ -68,7 +71,13 @@ public class PotatoMine : Plant
         }*/
         explodeArea.enabled = false;
         //±¨’®±Ìœ÷
+        potMineAnim.Explode();
 
+        Invoke("DestroyGameObject", 1f);
+    }
+
+    private void DestroyGameObject()
+    {
         Destroy(gameObject);
     }
 }

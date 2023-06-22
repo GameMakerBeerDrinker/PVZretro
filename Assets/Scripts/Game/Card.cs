@@ -61,15 +61,15 @@ public class Card : MonoBehaviour
         {
             dimImage.SetActive(true);
             rechargeImage.SetActive(true);
-            rechargeImage.transform.position = transform.position;
-            rechargeImage.transform.localScale = transform.localScale;
+            rechargeImage.transform.position = dimImage.transform.position;
+            rechargeImage.transform.localScale = dimImage.transform.localScale;
         }
         else if(cardState==CardState.Recharging)
         {
             rechargeImage.SetActive(true);
             float rechargePercantage = rechargingTimer * 1f / recharge;
-            rechargeImage.transform.localScale = new Vector3(1, rechargePercantage, 1);
-            rechargeImage.transform.position = transform.position + Vector3.up * (1 - rechargePercantage) * 0.5f;
+            rechargeImage.transform.localScale = new Vector3(dimImage.transform.localScale.x, rechargePercantage* dimImage.transform.localScale.y, 1);
+            rechargeImage.transform.position = transform.position + Vector3.up * (1 - rechargePercantage)* dimImage.transform.localScale.y * 0.5f;
             if (rechargingTimer<=0)
             {
                 cardState = CardState.Dim;
@@ -88,7 +88,7 @@ public class Card : MonoBehaviour
     private bool MouseOnCard()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        return Mathf.Abs((mousePosition.x - transform.position.x)) < 0.5 && Mathf.Abs((mousePosition.y - transform.position.y)) < 0.5;
+        return Mathf.Abs((mousePosition.x - transform.position.x)) < dimImage.transform.localScale.x/2 && Mathf.Abs((mousePosition.y - transform.position.y)) < dimImage.transform.localScale.y/2;
     }
 
     private void PickThisCard()

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3784243463375607983}
   - component: {fileID: -1998243137075677001}
   - component: {fileID: -4264158422605705259}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Repeater
   m_TagString: Plant
   m_Icon: {fileID: 0}
@@ -74,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2047702965
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.21176471, g: 0.8980392, b: 0.08235294, a: 1}
@@ -103,8 +103,9 @@ MonoBehaviour:
   plantName: 8
   cost: 200
   maxHealth: 300
+  isTakingDamage: 0
   bullet: {fileID: 2375907791602018988, guid: 601960dac46e15943963814d3cfbc3dc, type: 3}
-  peaShooterAnim: {fileID: 0}
+  peaShooterAnim: {fileID: 4248927795043355814}
   bulletPosition: {fileID: 4248927795113369576}
   shootDirection: {x: 1, y: 0, z: 0}
   bulletCount: 2
@@ -169,24 +170,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 270037592253436529, guid: 33a6c101a854ab14caefb9049fa0e3b7, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 270037592253436529, guid: 33a6c101a854ab14caefb9049fa0e3b7, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 270037592253436529, guid: 33a6c101a854ab14caefb9049fa0e3b7, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 270037592253436529, guid: 33a6c101a854ab14caefb9049fa0e3b7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 270037592253436529, guid: 33a6c101a854ab14caefb9049fa0e3b7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 270037592253436529, guid: 33a6c101a854ab14caefb9049fa0e3b7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -220,16 +209,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 270037592253436529, guid: 33a6c101a854ab14caefb9049fa0e3b7, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 270037592253436530, guid: 33a6c101a854ab14caefb9049fa0e3b7, type: 3}
       propertyPath: m_Name
       value: DoublePeaAnim Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33a6c101a854ab14caefb9049fa0e3b7, type: 3}
+--- !u!114 &4248927795043355814 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 270037592253436528, guid: 33a6c101a854ab14caefb9049fa0e3b7, type: 3}
+  m_PrefabInstance: {fileID: 4127659641839771350}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c8fb2ea0b3558d478fb9ff4f6171cd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4248927795043355815 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 270037592253436529, guid: 33a6c101a854ab14caefb9049fa0e3b7, type: 3}

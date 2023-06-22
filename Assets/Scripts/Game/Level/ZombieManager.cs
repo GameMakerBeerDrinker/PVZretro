@@ -29,8 +29,26 @@ public class ZombieManager : MonoBehaviour
         NewGame();
     }
 
+    /*[ExecuteInEditMode]
+    private void SetZombie()
+    {
+        
+    }*/
+
     private void NewGame()
     {
+        /*for (int wave = 0; wave < currentLevel.zombieWaves.Length; wave++)
+        {
+            int zombieCount = 0;
+            for (int zombieName = 0; zombieName < currentLevel.zombieWaves[wave].zombieNames.Length; zombieName++)
+                for (int zombieNum = 0; zombieNum < zombieWaves[wave].zombieNum[zombieName]; zombieNum++)
+                {
+                    currentLevel.zombieWaves[wave].zombies[zombieCount] = currentLevel.zombieWaves[wave].zombieNames[zombieName];
+                    zombieCount++;
+                }
+        }*/
+
+
         zombieWaves = currentLevel.zombieWaves;
         refreshTimer = 0;
         waveNum = 0;
@@ -97,7 +115,7 @@ public class ZombieManager : MonoBehaviour
             int generateLine = minHealthLine[Random.Range(0,count)];
 
             Vector3 positionCorrect = new Vector3(Random.Range(0, 2f), 0, 0);
-            Vector3 linePosition = new Vector3(0, -generateLine * GameManager.instance.tilemap.cellSize.y, 0);
+            Vector3 linePosition = new Vector3(0, -generateLine * GameManager.instance.tilemap.cellSize.x, 0);
             Vector3 generatePosition = transform.position + linePosition + positionCorrect;
 
 

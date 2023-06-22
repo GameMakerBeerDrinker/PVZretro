@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
     private int row;
     private Cell[,] field;
 
+    private float width;
+    private float height;
+
     public Card pickedUpCard;
 
     private void Awake()
@@ -22,7 +25,9 @@ public class GameManager : MonoBehaviour
         tilemap = GetComponent<Tilemap>();
 
         NewGame();
-        
+        width = tilemap.cellSize.y;
+        height = tilemap.cellSize.x;
+        Debug.Log(width);
     }
 
     private void NewGame()
@@ -51,10 +56,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        for (float i = 0; i < 10; i++)
-            Debug.DrawLine(new Vector3(-8 + 2 * i, -6, 0), new Vector3(-8 + 2 * i, 4, 0));
+        /*for (float i = 0; i < 10; i++)
+            Debug.DrawLine(new Vector3(-7 + 1.6f * i, -6, 0), new Vector3(-7 + 1.6f * i, 4, 0));
         for (float j = 0; j < 6; j++)
-            Debug.DrawLine(new Vector3(-8, -6 + 2 * j, 0), new Vector3(10, -6 + 2 * j, 0));
+            Debug.DrawLine(new Vector3(-7, -6 + 2 * j, 0), new Vector3(7.4f, -6 + 2 * j, 0));*/
 
         //Debug.Log(pickedUpCard);
         PutPlant();
@@ -79,10 +84,10 @@ public class GameManager : MonoBehaviour
             else if(cell.plant==null)
             {
                 Debug.Log("plant");
-                float x = Random.Range(-0.1f, 0.1f);
+                float x = Random.Range(-0.08f, 0.08f);
                 float y = Random.Range(-0.1f, 0.1f);
 
-                Vector3 plantPosition = tilemap.CellToWorld(cellPosition) + new Vector3(1, -1, 0) + new Vector3(x, y, 0);
+                Vector3 plantPosition = tilemap.CellToWorld(cellPosition) + new Vector3(width/2, -height/2, 0) + new Vector3(x, y, 0);
                 cell.plant = Instantiate(pickedUpCard.plant, plantPosition, Quaternion.Euler(0, 0, 0));
                 SunManager.instance.sun -= pickedUpCard.cost;
 

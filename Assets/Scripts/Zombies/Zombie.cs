@@ -74,6 +74,7 @@ public abstract class Zombie : MonoBehaviour
     {
         if (collision.tag == "Plant")
         {
+            collision.GetComponent<Plant>().isTakingDamage = true;
             collision.GetComponent<Plant>().TakeDamage(damage);
         }
     }
@@ -83,6 +84,7 @@ public abstract class Zombie : MonoBehaviour
         if(collision.tag=="Plant")
         {
             isEating = false;
+            collision.GetComponent<Plant>().isTakingDamage = false;
         }
     }
 

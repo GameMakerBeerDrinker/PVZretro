@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5053550179751100700}
   - component: {fileID: -600929272229355338}
   - component: {fileID: -6468746796710143967}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Peashooter
   m_TagString: Plant
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6812131832169168273}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2200487114702157401}
@@ -74,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2047702965
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.20877604, g: 0.8962264, b: 0.07947663, a: 1}
@@ -103,6 +103,7 @@ MonoBehaviour:
   plantName: 1
   cost: 100
   maxHealth: 300
+  isTakingDamage: 0
   bullet: {fileID: 2375907791602018988, guid: 601960dac46e15943963814d3cfbc3dc, type: 3}
   peaShooterAnim: {fileID: 2200487114702157400}
   bulletPosition: {fileID: 2200487115688944918}
@@ -178,7 +179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1521361797928536866, guid: c27785f44de9518468805bd2eaada0b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1521361797928536866, guid: c27785f44de9518468805bd2eaada0b9, type: 3}
       propertyPath: m_LocalPosition.z

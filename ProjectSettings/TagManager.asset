@@ -14,11 +14,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Background
+  - Plant
+  - Zombie
+  - UI
+  - Sun
   - 
   - 
   - 
@@ -43,4 +43,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 793312031
+    locked: 0
+  - name: Plant
+    uniqueID: 2247264331
+    locked: 0
+  - name: Zombie
+    uniqueID: 3303075723
+    locked: 0
+  - name: UI
+    uniqueID: 3594825465
+    locked: 0
+  - name: Sun
+    uniqueID: 217542239
     locked: 0

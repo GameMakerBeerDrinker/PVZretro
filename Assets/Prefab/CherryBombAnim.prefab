@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5276994231633044450}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RightMain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5276994232130872999}
   - component: {fileID: 5276994232130872992}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CherryBombAnim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,8 +61,8 @@ Transform:
   m_GameObject: {fileID: 5276994232130872998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5276994233572936797}
   - {fileID: 5276994231633044450}
@@ -95,7 +95,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5276994232202524541}
   - component: {fileID: 5276994232202524542}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CherryBombEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,8 +155,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2047702965
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 13069b2c54ad2ee4b9304d2fca1b7a5d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.24705882}
@@ -179,7 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5276994232674195766}
   - component: {fileID: 5276994232674195767}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CherryBombEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,8 +239,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2047702965
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 13069b2c54ad2ee4b9304d2fca1b7a5d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.24705882}
@@ -263,7 +263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5276994232772394437}
   - component: {fileID: 5276994232772394436}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HeartRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,8 +323,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2047702965
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6aac4384d2ae42d48a2f9522cbad4d3f, type: 3}
   m_Color: {r: 1, g: 0.16583595, b: 0.16583595, a: 1}
@@ -347,7 +347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5276994232783519553}
   - component: {fileID: 5276994232783519554}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GlitchGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -407,8 +407,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2047702965
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6aac4384d2ae42d48a2f9522cbad4d3f, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
@@ -431,7 +431,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5276994232829379824}
   - component: {fileID: 5276994232829379825}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HeartRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -491,8 +491,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2047702965
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6aac4384d2ae42d48a2f9522cbad4d3f, type: 3}
   m_Color: {r: 1, g: 0.16583595, b: 0.16583595, a: 1}
@@ -515,7 +515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5276994232990305543}
   - component: {fileID: 5276994232990305542}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GlitchGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -575,8 +575,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2047702965
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6aac4384d2ae42d48a2f9522cbad4d3f, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
@@ -599,7 +599,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5276994233362077483}
   - component: {fileID: 5276994233362077492}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HeartWhite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -659,8 +659,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2047702965
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6aac4384d2ae42d48a2f9522cbad4d3f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -683,7 +683,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5276994233552721111}
   - component: {fileID: 5276994233552721110}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HeartWhite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -743,8 +743,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2047702965
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6aac4384d2ae42d48a2f9522cbad4d3f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -766,7 +766,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5276994233572936797}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LeftMain
   m_TagString: Untagged
   m_Icon: {fileID: 0}

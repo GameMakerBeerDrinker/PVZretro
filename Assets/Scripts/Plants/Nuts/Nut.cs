@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class Nut : Plant
 {
+    public _Scripts.WalNutAnim walNutAnim;
+
     protected enum InjureState
     {
         Healthy,
@@ -13,10 +15,19 @@ public abstract class Nut : Plant
 
     protected InjureState injureState;
 
+
     private new void FixedUpdate()
     {
         base.FixedUpdate();
         ChangeState();
+        if(isTakingDamage)
+        {
+            walNutAnim.SetTakingDamageTrue();
+        }
+        else
+        {
+            walNutAnim.SetTakingDamageFalse();
+        }
     }
 
     private void ChangeState()

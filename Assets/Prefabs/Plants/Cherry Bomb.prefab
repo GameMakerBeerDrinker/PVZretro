@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -6912375896593058570}
   - component: {fileID: 8406929443712649375}
   - component: {fileID: -5112007511059902425}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cherry Bomb
   m_TagString: Plant
   m_Icon: {fileID: 0}
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2047702965
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.8962264, g: 0.045656744, b: 0.045656744, a: 1}
@@ -104,6 +104,7 @@ MonoBehaviour:
   plantName: 3
   cost: 150
   maxHealth: 300
+  isTakingDamage: 0
   damage: 1800
   explodeTime: 100
 --- !u!50 &-6912375896593058570
@@ -151,7 +152,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6, y: 5.8}
+  m_Size: {x: 4.5, y: 5}
   m_EdgeRadius: 0
 --- !u!61 &-5112007511059902425
 BoxCollider2D:
@@ -195,18 +196,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5276994232130872999, guid: 6e7734e5b887ab840a462c9b9a800fc1, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 5276994232130872999, guid: 6e7734e5b887ab840a462c9b9a800fc1, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 5276994232130872999, guid: 6e7734e5b887ab840a462c9b9a800fc1, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 5276994232130872999, guid: 6e7734e5b887ab840a462c9b9a800fc1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -245,10 +234,6 @@ PrefabInstance:
     - target: {fileID: 5276994232130872999, guid: 6e7734e5b887ab840a462c9b9a800fc1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5276994232130872999, guid: 6e7734e5b887ab840a462c9b9a800fc1, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e7734e5b887ab840a462c9b9a800fc1, type: 3}

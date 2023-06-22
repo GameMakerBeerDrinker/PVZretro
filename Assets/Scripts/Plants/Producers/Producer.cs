@@ -7,6 +7,8 @@ public abstract class Producer : Plant
     public GameObject product;
     public GameObject productPosition;
 
+    public _Scripts.SunflowerAnim sunflowerAnim;
+
     //初始生产周期范围与正常生产周期范围
     public int minFirstProducePeriod, maxFirstProducePeriod;
     public int minProducePeriod, maxProducePeriod;
@@ -34,7 +36,10 @@ public abstract class Producer : Plant
     {
         Debug.Log("sun produced");
         ResetProduce();
-        Instantiate(product, productPosition.transform.position, Quaternion.Euler(0, 0, 0)).GetComponent<Sun>().isFalling=false;
+        sunflowerAnim.SetProducingTrue();
+        Sun sun = Instantiate(product, productPosition.transform.position, Quaternion.Euler(0, 0, 0)).GetComponent<Sun>();
+        sun.isFalling = false;
+        sun.isProduced = true;
     }
 
     private void ResetProduce()

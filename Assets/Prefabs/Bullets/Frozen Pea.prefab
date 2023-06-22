@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6413636292789366992}
   - component: {fileID: 5220368844243255169}
   - component: {fileID: 3652643616537993773}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Frozen Pea
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -991891573
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.030562414, g: 0.69888544, b: 0.9528302, a: 1}
@@ -126,25 +126,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6413636292789366999}
     m_Modifications:
-    - target: {fileID: 523965617315299833, guid: d916dc17711b1f84db78ed5e7a064163, type: 3}
-      propertyPath: isSnow
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4670748468187143829, guid: d916dc17711b1f84db78ed5e7a064163, type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4670748468187143829, guid: d916dc17711b1f84db78ed5e7a064163, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4670748468187143829, guid: d916dc17711b1f84db78ed5e7a064163, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4670748468187143829, guid: d916dc17711b1f84db78ed5e7a064163, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4670748468187143829, guid: d916dc17711b1f84db78ed5e7a064163, type: 3}
       propertyPath: m_LocalPosition.x
@@ -185,10 +169,6 @@ PrefabInstance:
     - target: {fileID: 4670748468187143829, guid: d916dc17711b1f84db78ed5e7a064163, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4670748468187143829, guid: d916dc17711b1f84db78ed5e7a064163, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4670748468187143831, guid: d916dc17711b1f84db78ed5e7a064163, type: 3}
       propertyPath: m_Name

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6658940870954441657}
   - component: {fileID: 6658940870954441656}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2047702965
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0e38c6d867ad5d54a9f5e2b1361bd89b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.56078434}
@@ -98,7 +98,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6658940871125483084}
   - component: {fileID: 6658940871125483091}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -158,8 +158,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2047702965
+  m_SortingLayer: 2
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 68e29b657ef12be48af3df77804ac70d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -182,7 +182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6658940872331676777}
   - component: {fileID: 6658940872331676776}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SunGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,8 +242,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2047702965
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 7cc18bbab2121cc47abbbcf183be11ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
@@ -266,7 +266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6658940872490287598}
   - component: {fileID: 6658940872490287597}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Eyebow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,7 +309,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -327,8 +327,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2047702965
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d10db956bd70e1741ac51f2247a523bf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -351,7 +351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6658940872503826727}
   - component: {fileID: 6658940872503826726}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +393,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -411,8 +411,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2047702965
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d82cda1bcf8530d44a14be408a4822c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -435,7 +435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6658940872860624978}
   - component: {fileID: 6658940872860624977}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SunHeart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -495,8 +495,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2047702965
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c94cb05e2cf2aa54f9d9d121387f1f33, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.21960784}
@@ -519,7 +519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6658940872870978090}
   - component: {fileID: 6658940872870978089}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -561,7 +561,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -579,8 +579,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2047702965
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 9a64c01fc9ef391428433021a1746b1a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -603,7 +603,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6658940872938980917}
   - component: {fileID: 6658940872938980918}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SunFlowerAnim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -619,8 +619,8 @@ Transform:
   m_GameObject: {fileID: 6658940872938980919}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6658940871125483084}
   - {fileID: 6658940870954441657}
@@ -650,7 +650,7 @@ MonoBehaviour:
   range: 0.03
   eyeYScale: 1
   isBlinking: 0
-  nextBlinkTime: 500
+  nextBlinkTime: 100
   nextRandomPos: {x: 0, y: 0, z: 0}
   isProducing: 0
   maxAlpha: 0

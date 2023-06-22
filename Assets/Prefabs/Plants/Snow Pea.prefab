@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1510929600019012745}
   - component: {fileID: -6469337113954088368}
   - component: {fileID: 6558098217907447597}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Snow Pea
   m_TagString: Plant
   m_Icon: {fileID: 0}
@@ -74,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2047702965
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.09740115, g: 0.88997334, b: 0.9056604, a: 1}
@@ -103,8 +103,9 @@ MonoBehaviour:
   plantName: 6
   cost: 175
   maxHealth: 300
+  isTakingDamage: 0
   bullet: {fileID: 6413636292789366993, guid: b3ced6e27f5d81a47bf70110fdfa87eb, type: 3}
-  peaShooterAnim: {fileID: 0}
+  peaShooterAnim: {fileID: 3839493484268973181}
   bulletPosition: {fileID: 3839493483284184883}
   shootDirection: {x: 1, y: 0, z: 0}
   bulletCount: 1
@@ -173,20 +174,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5856690540020289943, guid: 197e406eedf0eab4d9e446f25889a916, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 5856690540020289943, guid: 197e406eedf0eab4d9e446f25889a916, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 5856690540020289943, guid: 197e406eedf0eab4d9e446f25889a916, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5856690540020289943, guid: 197e406eedf0eab4d9e446f25889a916, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5856690540020289943, guid: 197e406eedf0eab4d9e446f25889a916, type: 3}
       propertyPath: m_LocalPosition.z
@@ -232,3 +225,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5856690540020289943, guid: 197e406eedf0eab4d9e446f25889a916, type: 3}
   m_PrefabInstance: {fileID: 7210188232905702891}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3839493484268973181 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5856690540020289942, guid: 197e406eedf0eab4d9e446f25889a916, type: 3}
+  m_PrefabInstance: {fileID: 7210188232905702891}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c8fb2ea0b3558d478fb9ff4f6171cd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

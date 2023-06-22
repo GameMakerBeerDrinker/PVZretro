@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -17,7 +18,7 @@ namespace _Scripts {
         public float eyeYScale = 1f;
     
         public bool isBlinking;
-        public int nextBlinkTime = 500;
+        public int nextBlinkTime;
         public Vector3 nextRandomPos;
 
         public bool isProducing;
@@ -47,7 +48,8 @@ namespace _Scripts {
             isTakingDamage = false;
             sunBottom.material = normalLineMaterial;
         }
-        private void Update() {
+
+        private void FixedUpdate() {
             bottom.localScale = Vector3.one + range * Mathf.Sin(Mathf.Deg2Rad * timer * speed) *
                 (Vector3.right + Vector3.down);
         
@@ -67,20 +69,21 @@ namespace _Scripts {
 
         private void ProducingSun() {
             if (isProducing && !curAlpha.Equal(maxAlpha, 0.01f)) {
+                Debug.Log(curAlpha);
                 sun.transform.localScale =
-                    Calc.ApproachValue(sun.transform.localScale, 1.3f * Vector3.one, 256f * Vector3.one);
+                    Calc.ApproachValue(sun.transform.localScale, 1.3f * Vector3.one, 32f * Vector3.one);
                 mouse.transform.localScale =
-                    Calc.ApproachValue(mouse.transform.localScale, tarMouseScale, 256f * Vector3.one);
+                    Calc.ApproachValue(mouse.transform.localScale, tarMouseScale, 32f * Vector3.one);
             } else if (isProducing && curAlpha.Equal(maxAlpha, 0.01f)) {
                 isProducing = false;
             } else {
                 maxAlpha = 0f;
                 mouse.transform.localScale =
-                    Calc.ApproachValue(mouse.transform.localScale, (Vector3)Vector2.one, 256f * Vector3.one);
+                    Calc.ApproachValue(mouse.transform.localScale, (Vector3)Vector2.one, 32f * Vector3.one);
                 sun.transform.localScale =
-                    Calc.ApproachValue(sun.transform.localScale, Vector3.one, 256f * Vector3.one);
+                    Calc.ApproachValue(sun.transform.localScale, Vector3.one, 32f * Vector3.one);
             }
-            curAlpha.ApproachRef(maxAlpha, 256f);
+            curAlpha.ApproachRef(maxAlpha, 32f);
             if(curAlpha.Equal(sunGlow.color.a, 0.01f)) return;
             sunGlow.color = sunGlow.color.SetAlpha(curAlpha);
         }
@@ -90,16 +93,16 @@ namespace _Scripts {
             if (timer == nextBlinkTime) isBlinking = true;
 
             if (isBlinking && !eyeYScale.Equal(0f, 0.1f)) {
-                eyeYScale.ApproachRef(0f, 32f);
+                eyeYScale.ApproachRef(0f, 12f);
             }
             else if (isBlinking && eyeYScale.Equal(0f, 0.1f)) {
                 isBlinking = false;
-                nextBlinkTime += (Random.value >= 0.2) ? Random.Range(1000, 2000) : Random.Range(100, 200);
+                nextBlinkTime += (Random.value >= 0.2) ? Random.Range(300, 500) : Random.Range(50, 80);
                 nextRandomPos = new Vector3(Random.Range(-0.3f, 0.3f), Random.Range(-0.3f, 0.3f),
                     Random.Range(-0.3f, 0.3f));
             }
             else {
-                eyeYScale.ApproachRef(1f, 32f);
+                eyeYScale.ApproachRef(1f, 12f);
             }
 
             eye.localScale = Mathf.Sign(nextRandomPos.x) * (1.1f + 0.1f * Mathf.Sin(Mathf.Deg2Rad * timer * speed)) *

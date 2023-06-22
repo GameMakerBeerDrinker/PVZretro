@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 641443034429190062}
   - component: {fileID: 1994043261920070233}
   - component: {fileID: -6009020211903378580}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall Nut
   m_TagString: Plant
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -74,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2047702965
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.8584906, g: 0.7171612, b: 0.06803127, a: 1}
@@ -103,6 +103,8 @@ MonoBehaviour:
   plantName: 4
   cost: 50
   maxHealth: 4000
+  isTakingDamage: 0
+  walNutAnim: {fileID: 0}
 --- !u!50 &1994043261920070233
 Rigidbody2D:
   serializedVersion: 4
@@ -162,18 +164,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5991158970436531832, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 5991158970436531832, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 5991158970436531832, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 5991158970436531832, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -213,21 +203,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5991158970436531832, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5991158970436531833, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
       propertyPath: m_Name
       value: WallNutAnim
-      objectReference: {fileID: 0}
-    - target: {fileID: 5991158970436531835, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
-      propertyPath: shield
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5991158971005897438, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75a8fb2d710338541ac8eb790c062308, type: 3}

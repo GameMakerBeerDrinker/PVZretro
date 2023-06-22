@@ -6,13 +6,29 @@ public class Sun : MonoBehaviour
 {
     public int value;
 
+    public Vector3 destination;
+    private float collectSpeed=30f;
+
+    [HideInInspector]
     public bool isFalling;
     public float fallSpeed;
+
+    [HideInInspector]
+    public bool isProduced;
+    /*public float produceMoveX;
+    public float produceSpeedY;
+    public float moveTime;
+    private float speedX;*/
 
     public float collectDistance;
     public int disappearTime;
     private int disappearTimer;
     public bool isCollected;
+
+    private void Start()
+    {
+
+    }
 
     private void Update()
     {
@@ -27,6 +43,21 @@ public class Sun : MonoBehaviour
         disappearTimer++;
         if (disappearTimer >= disappearTime && !isCollected)
             Disappear();
+        if(isCollected)
+        {
+            Vector3 direction = (destination - transform.position).normalized;
+
+            if((transform.position-destination).magnitude>0.2f)
+                transform.position += collectSpeed * direction * Time.fixedDeltaTime;
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
+        if(isProduced)
+        {
+            //生产出的阳光随机落点
+        }
     }
 
     private void Disappear()
@@ -41,8 +72,6 @@ public class Sun : MonoBehaviour
         SunManager.instance.sun += value;
 
         //(动画表现...)
-
-        Destroy(gameObject);
     }
 
     public Vector3 fallDestination;

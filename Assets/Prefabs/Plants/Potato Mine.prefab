@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8145412635448610519}
   - component: {fileID: 1462214006727056261}
   - component: {fileID: -8033425895167360639}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Potato Mine
   m_TagString: Plant
   m_Icon: {fileID: 0}
@@ -74,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2047702965
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -103,6 +103,8 @@ MonoBehaviour:
   plantName: 5
   cost: 25
   maxHealth: 300
+  isTakingDamage: 0
+  potMineAnim: {fileID: 7945077328651145831}
   prepareTime: 1500
   drillOutTime: 100
   damage: 1800
@@ -169,18 +171,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8547312845305520417, guid: 49c81f6193125d24e9ffa68a920a5ed9, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8547312845305520417, guid: 49c81f6193125d24e9ffa68a920a5ed9, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8547312845305520417, guid: 49c81f6193125d24e9ffa68a920a5ed9, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8547312845305520417, guid: 49c81f6193125d24e9ffa68a920a5ed9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -220,12 +210,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8547312845305520417, guid: 49c81f6193125d24e9ffa68a920a5ed9, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
+    - target: {fileID: 8547312846077748347, guid: 49c81f6193125d24e9ffa68a920a5ed9, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8547312846077748347, guid: 49c81f6193125d24e9ffa68a920a5ed9, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -2047702965
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49c81f6193125d24e9ffa68a920a5ed9, type: 3}
+--- !u!114 &7945077328651145831 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8547312845305520430, guid: 49c81f6193125d24e9ffa68a920a5ed9, type: 3}
+  m_PrefabInstance: {fileID: 1791502477872558921}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f2fe8041b10854eb5443139e59e4a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7945077328651145832 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8547312845305520417, guid: 49c81f6193125d24e9ffa68a920a5ed9, type: 3}
