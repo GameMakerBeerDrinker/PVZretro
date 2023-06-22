@@ -15,10 +15,10 @@ public class Sun : MonoBehaviour
 
     [HideInInspector]
     public bool isProduced;
-    /*public float produceMoveX;
-    public float produceSpeedY;
-    public float moveTime;
-    private float speedX;*/
+    public float produceDistance;
+    public float produceMoveSpeed;
+    private Vector3 produceDirection;
+    private Vector3 produceDestination;
 
     public float collectDistance;
     public int disappearTime;
@@ -27,7 +27,8 @@ public class Sun : MonoBehaviour
 
     private void Start()
     {
-
+        produceDirection = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0).normalized;
+        produceDestination = transform.position + produceDirection * produceDistance;
     }
 
     private void Update()
@@ -57,6 +58,8 @@ public class Sun : MonoBehaviour
         if(isProduced)
         {
             //生产出的阳光随机落点
+            if ((transform.position - produceDestination).magnitude > 0.1f)
+                transform.position += produceMoveSpeed * produceDirection * Time.fixedDeltaTime;
         }
     }
 

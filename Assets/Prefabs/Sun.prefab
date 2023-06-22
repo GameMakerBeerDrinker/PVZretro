@@ -187,6 +187,8 @@ MonoBehaviour:
   isFalling: 0
   fallSpeed: 1
   isProduced: 0
+  produceDistance: 1
+  produceMoveSpeed: 1
   collectDistance: 0.6
   disappearTime: 1000
   isCollected: 0
