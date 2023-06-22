@@ -12,7 +12,8 @@ public class Shovel : MonoBehaviour
     {
         if(isPickedUp)
         {
-            shovel.SetActive(false);
+            shovel.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition)+new Vector3(0.5f,0.5f,10);
+            //shovel.SetActive(false);
             if(Input.GetMouseButtonDown(0))
             {
                 GameManager.instance.RemovePlant();
@@ -23,10 +24,12 @@ public class Shovel : MonoBehaviour
             {
                 isPickedUp = false;
             }
+            
         }
         else
         {
-            shovel.SetActive(true);
+            shovel.transform.position = transform.position;
+            //shovel.SetActive(true);
             if(Input.GetMouseButtonDown(0)&&MouseOnShovel())
             {
                 isPickedUp = true;
