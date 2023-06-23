@@ -7,6 +7,8 @@ using Random = UnityEngine.Random;
 
 public class ZombieAnim : MonoBehaviour {
 
+    public GameObject body;
+
     public int timer;
     public int nextMoveTime;
     public float nextXPos;
@@ -29,7 +31,7 @@ public class ZombieAnim : MonoBehaviour {
 
     public void RefreshBlood() {
         for (int i = 0; i < hp; i++) {
-            bloodCircle[i].transform.position = transform.position + 1f * Calc.Deg2Dir3(i * 36f + 2f * timer);
+            bloodCircle[i].transform.position = transform.position + 1f * Calc.Deg2Dir3(i * 360f*20/body.GetComponent<Zombie>().maxhealth + 2f * timer);
         }
 
         for (int i = hp; i < 10; i++) {
@@ -40,7 +42,7 @@ public class ZombieAnim : MonoBehaviour {
 
 
     private void Update() {
-        if(Input.anyKeyDown) hp--;
+        //if(Input.anyKeyDown) hp--;
     }
     private void FixedUpdate() {
         RefreshBlood();
@@ -50,7 +52,7 @@ public class ZombieAnim : MonoBehaviour {
 
     private void Movement() {
         if (timer == nextMoveTime) {
-            nextXPos -= Random.Range(0.8f, 1.2f);
+            nextXPos = body.transform.position.x;
             nextMoveTime += Random.Range(100, 150);
             nextRandomRot += new Vector3(Random.Range(-90f, 90f), Random.Range(-90f, 90f), Random.Range(-90f, 90f));
         }
