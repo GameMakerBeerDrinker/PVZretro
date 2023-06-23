@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract class Nut : Plant
@@ -15,7 +16,9 @@ public abstract class Nut : Plant
 
     protected InjureState injureState;
 
-
+    private void Start() {
+        walNutAnim.SetCurHpPercentage(100);
+    }
     private new void FixedUpdate()
     {
         base.FixedUpdate();
@@ -23,6 +26,7 @@ public abstract class Nut : Plant
         if(isTakingDamage)
         {
             walNutAnim.SetTakingDamageTrue();
+            walNutAnim.SetCurHpPercentage((int)((float)currentHealth/maxHealth * 100f));
         }
         else
         {

@@ -38,8 +38,7 @@ public abstract class Producer : Plant
         ResetProduce();
         sunflowerAnim.SetProducingTrue();
         Sun sun = Instantiate(product, productPosition.transform.position, Quaternion.Euler(0, 0, 0)).GetComponent<Sun>();
-        sun.isFalling = false;
-        sun.isProduced = true;
+        sun.SetProduced();
     }
 
     private void ResetProduce()

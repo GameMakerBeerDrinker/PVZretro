@@ -68,20 +68,19 @@ namespace _Scripts {
         }
 
         private void ProducingSun() {
-            if (isProducing && !curAlpha.Equal(maxAlpha, 0.01f)) {
-                Debug.Log(curAlpha);
+            if (isProducing && !curAlpha.Equal(maxAlpha, 0.05f)) {
                 sun.transform.localScale =
-                    Calc.ApproachValue(sun.transform.localScale, 1.3f * Vector3.one, 32f * Vector3.one);
+                    Calc.ApproachValue(sun.transform.localScale, 1.3f * Vector3.one, 16f * Vector3.one);
                 mouse.transform.localScale =
-                    Calc.ApproachValue(mouse.transform.localScale, tarMouseScale, 32f * Vector3.one);
-            } else if (isProducing && curAlpha.Equal(maxAlpha, 0.01f)) {
+                    Calc.ApproachValue(mouse.transform.localScale, tarMouseScale, 16f * Vector3.one);
+            } else if (isProducing && curAlpha.Equal(maxAlpha, 0.05f)) {
                 isProducing = false;
             } else {
                 maxAlpha = 0f;
                 mouse.transform.localScale =
-                    Calc.ApproachValue(mouse.transform.localScale, (Vector3)Vector2.one, 32f * Vector3.one);
+                    Calc.ApproachValue(mouse.transform.localScale, (Vector3)Vector2.one, 16f * Vector3.one);
                 sun.transform.localScale =
-                    Calc.ApproachValue(sun.transform.localScale, Vector3.one, 32f * Vector3.one);
+                    Calc.ApproachValue(sun.transform.localScale, Vector3.one, 16f * Vector3.one);
             }
             curAlpha.ApproachRef(maxAlpha, 32f);
             if(curAlpha.Equal(sunGlow.color.a, 0.01f)) return;
@@ -93,7 +92,7 @@ namespace _Scripts {
             if (timer == nextBlinkTime) isBlinking = true;
 
             if (isBlinking && !eyeYScale.Equal(0f, 0.1f)) {
-                eyeYScale.ApproachRef(0f, 12f);
+                eyeYScale.ApproachRef(0f, 8f);
             }
             else if (isBlinking && eyeYScale.Equal(0f, 0.1f)) {
                 isBlinking = false;
@@ -102,7 +101,7 @@ namespace _Scripts {
                     Random.Range(-0.3f, 0.3f));
             }
             else {
-                eyeYScale.ApproachRef(1f, 12f);
+                eyeYScale.ApproachRef(1f, 8f);
             }
 
             eye.localScale = Mathf.Sign(nextRandomPos.x) * (1.1f + 0.1f * Mathf.Sin(Mathf.Deg2Rad * timer * speed)) *

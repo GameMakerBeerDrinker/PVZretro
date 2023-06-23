@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5991158969551629290}
   - component: {fileID: 5991158969551629269}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Eyebow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -72,9 +72,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2047702965
-  m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: a892c55f43cb92e45b6d6044aa36f2af, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -96,7 +96,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5991158970014730893}
   - component: {fileID: 5991158970014730892}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Mouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -158,7 +158,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: d82cda1bcf8530d44a14be408a4822c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -180,7 +180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5991158970436531832}
   - component: {fileID: 5991158970436531835}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: WallNutAnim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,11 +196,11 @@ Transform:
   m_GameObject: {fileID: 5991158970436531833}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5991158971005897438}
   - {fileID: 6101926877384227087}
+  - {fileID: 5991158971005897438}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -239,7 +239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5991158970631229064}
   - component: {fileID: 5991158970631229067}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -301,7 +301,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 4cebe15c476611f4d82acaa4abe46b5d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -323,7 +323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5991158971005897438}
   - component: {fileID: 5991158971005897433}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ Transform:
   m_Children:
   - {fileID: 5991158969551629290}
   m_Father: {fileID: 5991158970436531832}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5991158971005897433
 SpriteRenderer:
@@ -386,7 +386,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 6aac4384d2ae42d48a2f9522cbad4d3f, type: 3}
   m_Color: {r: 0.33333325, g: 1, b: 0, a: 1}
   m_FlipX: 0
@@ -406,16 +406,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 5991158970436531832}
     m_Modifications:
     - target: {fileID: -8700617353114198275, guid: 18f6bff148f4b734188440d4d64633e8, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: -8700617353114198275, guid: 18f6bff148f4b734188440d4d64633e8, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 18f6bff148f4b734188440d4d64633e8, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 18f6bff148f4b734188440d4d64633e8, type: 3}
       propertyPath: m_LocalScale.x
@@ -470,29 +466,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5117700066308340382, guid: 18f6bff148f4b734188440d4d64633e8, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: -5117700066308340382, guid: 18f6bff148f4b734188440d4d64633e8, type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -3272106112100924687, guid: 18f6bff148f4b734188440d4d64633e8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -10.24
-      objectReference: {fileID: 0}
-    - target: {fileID: -2571118854743697038, guid: 18f6bff148f4b734188440d4d64633e8, type: 3}
-      propertyPath: m_RenderingLayerMask
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -2571118854743697038, guid: 18f6bff148f4b734188440d4d64633e8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3dd1592ced42b324eb3300ef6a1896a2, type: 2}
-    - target: {fileID: 65702495048144492, guid: 18f6bff148f4b734188440d4d64633e8, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 65702495048144492, guid: 18f6bff148f4b734188440d4d64633e8, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -500,10 +480,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 18f6bff148f4b734188440d4d64633e8, type: 3}
       propertyPath: m_Name
       value: Shield2
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 18f6bff148f4b734188440d4d64633e8, type: 3}
-      propertyPath: m_Layer
-      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18f6bff148f4b734188440d4d64633e8, type: 3}

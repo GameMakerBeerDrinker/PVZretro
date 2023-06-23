@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using _Scripts;
 using UnityEngine;
 
 public class Sun : MonoBehaviour
@@ -14,7 +15,6 @@ public class Sun : MonoBehaviour
     public float fallSpeed;
 
     [HideInInspector]
-    public bool isProduced;
     public float produceDistance;
     public float produceMoveSpeed;
     private Vector3 produceDirection;
@@ -55,13 +55,44 @@ public class Sun : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        if(isProduced)
+        
+        MoveToProducedPoint();
+        /*if(isProduced)
         {
             //生产出的阳光随机落点
-            if ((transform.position - produceDestination).magnitude > 0.1f)
+            /*if ((transform.position - produceDestination).magnitude > 0.1f)
                 transform.position += produceMoveSpeed * produceDirection * Time.fixedDeltaTime;
+                    
+        }*/
+    }
+
+    public float stVerSpd;
+    public float curVerSpd;
+    public float horSpd;
+    public bool isProduced;
+
+    public void SetProduced() {
+        isProduced = true;
+        isFalling = false;
+
+        horSpd = Random.Range(-3f, 3f);
+        stVerSpd = Random.Range(5f, 10f);
+        curVerSpd = stVerSpd;
+    }
+
+    public void MoveToProducedPoint() {
+        if (isProduced) {
+            curVerSpd -= 0.2f;
+
+            if (curVerSpd.Equal(-stVerSpd, 0.1f)) {
+                isProduced = false;
+            }
+            
+            transform.position += horSpd * Time.fixedDeltaTime * Vector3.right;
+            transform.position += curVerSpd * Time.fixedDeltaTime * Vector3.up;
         }
     }
+    
 
     private void Disappear()
     {

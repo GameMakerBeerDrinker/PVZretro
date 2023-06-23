@@ -53,6 +53,9 @@ TagManager:
   - name: Zombie
     uniqueID: 3303075723
     locked: 0
+  - name: ForeGround
+    uniqueID: 4152202385
+    locked: 0
   - name: UI
     uniqueID: 3594825465
     locked: 0

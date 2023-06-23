@@ -20,6 +20,11 @@ namespace _Scripts {
 
         public int timer = 0;
 
+        public void SetCurHpPercentage(int cent) {
+            curHp = cent;
+            core.color = Color.HSVToRGB((float)curHp / maxHp * 0.28f, 1f, 1f);
+        }
+
         public void SetTakingDamageTrue() {
             isTakingDamage = true;
         }
@@ -28,6 +33,12 @@ namespace _Scripts {
             isTakingDamage = false;
         }
 
+        public Renderer shieldMesh;
+        private void Start() {
+            shieldMesh.sortingLayerName = "Plant";
+        }
+        
+
         private void FixedUpdate() {
             shield.transform.rotation = Quaternion.Euler(Time.time * -10f, Time.time * -20f, Time.time * 30f);
             core.transform.localPosition = (2f + 0.5f * Mathf.Sin(100f * Time.time * Mathf.Deg2Rad)) * Vector3.up;
@@ -35,7 +46,6 @@ namespace _Scripts {
                 shield.transform.rotation = Quaternion.Euler(0,Time.time * -200f , 0);
                 core.transform.localPosition = (2f + 0.1f * Mathf.Sin(100f * Time.time * 5f * Mathf.Deg2Rad)) * Vector3.up;
             }
-            core.color = Color.HSVToRGB((float)curHp / maxHp * 0.28f, 1f, 1f);
 
             EyeMovementAndBlinking();
             timer++;

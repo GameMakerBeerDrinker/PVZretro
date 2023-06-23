@@ -56,7 +56,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _FresnelPower: 0.5
-    - _QueueControl: 0
+    - _QueueControl: 1
     - _QueueOffset: 0
     - _VertexFrequency: 4
     m_Colors:
