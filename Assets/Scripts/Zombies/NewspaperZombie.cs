@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NewspaperZombie : Zombie
 {
+    public Sprite mailEmpty, mail;
+
     public float madSpeed;
     public int madDamage;
     public float stunTime;
@@ -24,8 +26,14 @@ public class NewspaperZombie : Zombie
         }
     }
 
+    public override void ArmorBreak()
+    {
+        
+    }
+
     private void LosePaper()
     {
+        armor.GetComponent<SpriteRenderer>().sprite = mailEmpty;
         isMad = true;
         speed = 0;
         damage = 0;
@@ -34,6 +42,7 @@ public class NewspaperZombie : Zombie
 
     private void GetMad()
     {
+        armor.GetComponent<SpriteRenderer>().sprite = mail;
         speed = madSpeed;
         damage = madDamage;
     }

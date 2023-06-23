@@ -16,6 +16,10 @@ public abstract class Zombie : MonoBehaviour
 {
     public ZombieName zombieName;
 
+    public ZombieAnim zombieAnim;
+    public GameObject armor;
+    public Material brokenArmor;
+
     public bool withArmor;
     public int armorHealth;
     public int bodyHealth;
@@ -36,15 +40,32 @@ public abstract class Zombie : MonoBehaviour
     private void Start()
     {
         currentHealth = maxhealth;
+        zombieAnim.hp = currentHealth / 20;
         halfspeed = speed / 2;
         halfdamage = damage * 1f / 2;
     }
 
     protected void FixedUpdate()
     {
+        ArmorBreak();
         if (!isEating)
             Move();
         GetCold();
+    }
+
+    public virtual void ArmorBreak()
+    {
+        if (withArmor)
+        {
+            if (currentHealth - bodyHealth < armorHealth / 2)
+            {
+                armor.GetComponent<Renderer>().material = brokenArmor;
+            }
+            if (currentHealth <= bodyHealth)
+            {
+                armor.SetActive(false);
+            }
+        }
     }
 
     protected virtual void GetCold()
@@ -91,6 +112,7 @@ public abstract class Zombie : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        zombieAnim.hp = currentHealth / 20;
         //Debug.Log(currentHealth);
         if (currentHealth <= 0)
             Die();

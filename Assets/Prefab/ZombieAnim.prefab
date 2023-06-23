@@ -126,6 +126,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8299244530021845749}
+  - component: {fileID: 8508875718160077522}
   m_Layer: 0
   m_Name: ZombieAnim
   m_TagString: Untagged
@@ -141,7 +142,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8299244530021845750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0584561, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -153,6 +154,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8508875718160077522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8299244530021845750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 713dccdc75e300d4f8f95ec4a3c17976, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 0}
+  timer: 0
+  nextMoveTime: 0
+  nextXPos: 0
+  curXPos: 0
+  nextRandomRot: {x: 0, y: 0, z: 0}
+  curRot: {x: 0, y: 0, z: 0}
+  head: {fileID: 8299244530785779841}
+  bloodPrefab: {fileID: 4753157653548527701, guid: e349e22d45378484483de30b1da872e0, type: 3}
+  bloodCircle: []
+  hp: 0
 --- !u!1 &8299244530090518735
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,7 +347,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: eec89de271ec1d94184c1697aaf57dd6, type: 2}
+  - {fileID: 2100000, guid: db6ba92cc63a632439c2fd8e545cdca7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -341,8 +365,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -991891573
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a9f6f8bc49dd8cd43ba053bdc8f1b9e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -636,6 +660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713dccdc75e300d4f8f95ec4a3c17976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  body: {fileID: 0}
   timer: 0
   nextMoveTime: 0
   nextXPos: 5
