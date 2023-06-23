@@ -13,9 +13,14 @@ public class ParticleAnim : MonoBehaviour {
     public bool isZero;
     public float initRot;
     public float randSpeed;
-
-    public bool isSnow;
+    
     public Color snowColor;
+    public Color normColor;
+
+    public void SetColor(bool isSnow) {
+        if(isSnow) spriteRenderer.color = snowColor;
+        else spriteRenderer.color = normColor;
+    }
 
     private void Start() {
         initRot = Random.Range(-180f, 180f);
@@ -23,7 +28,6 @@ public class ParticleAnim : MonoBehaviour {
         isZero = Random.value > 0.5f;
 
         if (isZero) spriteRenderer.sprite = zero;
-        if (isSnow) spriteRenderer.color = snowColor;
         transform.rotation = Quaternion.Euler(0,0,initRot);
     }
 
@@ -32,7 +36,7 @@ public class ParticleAnim : MonoBehaviour {
         transform.localScale = transform.localScale.ApproachValue(Vector3.zero, randSpeed * Vector3.one);
 
         if (transform.localScale.x.Equal(0f, 0.01f)) {
-            Destroy(gameObject);
+            ParticleManager.Manager.peaParPool.Release(this);
         }
     }
 }

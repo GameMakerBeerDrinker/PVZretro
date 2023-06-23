@@ -64,6 +64,14 @@ public class Sun : MonoBehaviour
                 transform.position += produceMoveSpeed * produceDirection * Time.fixedDeltaTime;
                     
         }*/
+        
+        if (disappearTime % 20 == 0) {
+            var randPos = new Vector3(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f));
+            ParticleAnim particle = ParticleManager.Manager.peaParPool.Get();
+            particle.transform.position = transform.position + randPos;
+            particle.SetColor(true);
+        }
+
     }
 
     public float stVerSpd;
@@ -97,7 +105,10 @@ public class Sun : MonoBehaviour
     private void Disappear()
     {
         Debug.Log("sun disappear");
-        Destroy(gameObject);
+        transform.localScale = transform.localScale.ApproachValue(Vector3.zero, 16f * Vector3.one);
+        if(transform.localScale.x.Equal(0f,0.1f)){
+            Destroy(gameObject);
+        }
     }
 
     public void Collect()

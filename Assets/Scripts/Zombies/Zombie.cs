@@ -1,130 +1,140 @@
 using System.Collections;
 using System.Collections.Generic;
+using _Scripts;
 using UnityEngine;
 
-public enum ZombieName
-{
-    RegularZombie,
-    FlagZombie,
-    ConeheadZombie,
-    PoleVaultingZombie,
-    BucketheadZombie,
-    NewspaperZombie,
-}
-
-public abstract class Zombie : MonoBehaviour
-{
-    public ZombieName zombieName;
-
-    public ZombieAnim zombieAnim;
-    public GameObject armor;
-    public Material brokenArmor;
-
-    public bool withArmor;
-    public int armorHealth;
-    public int bodyHealth;
-    public int maxhealth;
-
-    public int currentHealth;
-
-    public float speed;
-    protected float halfspeed;
-
-    protected bool isEating;
-    public int damage;
-    protected float halfdamage;
-
-    public bool isCold;
-    public int coldTimer;
-
-    private void Start()
+namespace Zombies {
+    public enum ZombieName
     {
-        currentHealth = maxhealth;
-        zombieAnim.hp = currentHealth / 20;
-        halfspeed = speed / 2;
-        halfdamage = damage * 1f / 2;
+        RegularZombie,
+        FlagZombie,
+        ConeheadZombie,
+        PoleVaultingZombie,
+        BucketheadZombie,
+        NewspaperZombie,
     }
 
-    protected void FixedUpdate()
+    public abstract class Zombie : MonoBehaviour
     {
-        ArmorBreak();
-        if (!isEating)
-            Move();
-        GetCold();
-    }
+        public ZombieName zombieName;
 
-    public virtual void ArmorBreak()
-    {
-        if (withArmor)
+        public ZombieAnim zombieAnim;
+        public GameObject armor;
+        public Material brokenArmor;
+
+        public bool withArmor;
+        public int armorHealth;
+        public int bodyHealth;
+        public int maxhealth;
+
+        public int currentHealth;
+
+        public float speed;
+        protected float halfspeed;
+
+        protected bool isEating;
+        public int damage;
+        protected float halfdamage;
+
+        public bool isCold;
+        public int coldTimer;
+
+        public GameObject parent;
+        public ZombieAnim anim;
+
+        private void Start()
         {
-            if (currentHealth - bodyHealth < armorHealth / 2)
+            currentHealth = maxhealth;
+            //TODO:here also
+            //zombieAnim.maxHp = currentHealth / 20;
+            halfspeed = speed / 2;
+            halfdamage = damage * 1f / 2;
+        }
+
+        protected void FixedUpdate()
+        {
+            ArmorBreak();
+            if (!isEating)
+                Move();
+            GetCold();
+        }
+
+        public virtual void ArmorBreak()
+        {
+            if (withArmor)
             {
-                armor.GetComponent<Renderer>().material = brokenArmor;
+                if (currentHealth - bodyHealth < armorHealth / 2)
+                {
+                    anim.armor.material = brokenArmor;
+                }
+                if (currentHealth <= bodyHealth)
+                {
+                    anim.armor.sprite = null;
+                }
             }
-            if (currentHealth <= bodyHealth)
+        }
+
+        protected virtual void GetCold()
+        {
+            coldTimer++;
+            if (coldTimer >= 1000)
+                isCold = false;
+        }
+
+        private void Move()
+        {
+            if(!isCold)
+                transform.position += speed * Vector3.left * Time.fixedDeltaTime;
+            else
+                transform.position += speed/2 * Vector3.left * Time.fixedDeltaTime;
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if(collision.tag=="Plant")
             {
-                armor.SetActive(false);
+                isEating = true;
             }
         }
-    }
 
-    protected virtual void GetCold()
-    {
-        coldTimer++;
-        if (coldTimer >= 1000)
-            isCold = false;
-    }
-
-    private void Move()
-    {
-        if(!isCold)
-            transform.position += speed * Vector3.left * Time.fixedDeltaTime;
-        else
-            transform.position += speed/2 * Vector3.left * Time.fixedDeltaTime;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.tag=="Plant")
+        private void OnTriggerStay2D(Collider2D collision)
         {
-            isEating = true;
+            if (collision.tag == "Plant")
+            {
+                collision.GetComponent<Plant>().isTakingDamage = true;
+                collision.GetComponent<Plant>().TakeDamage(damage);
+            }
         }
-    }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.tag == "Plant")
+        private void OnTriggerExit2D(Collider2D collision)
         {
-            collision.GetComponent<Plant>().isTakingDamage = true;
-            collision.GetComponent<Plant>().TakeDamage(damage);
+            if(collision.tag=="Plant")
+            {
+                isEating = false;
+                collision.GetComponent<Plant>().isTakingDamage = false;
+            }
         }
-    }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if(collision.tag=="Plant")
+        public void TakeDamage(int damage)
         {
-            isEating = false;
-            collision.GetComponent<Plant>().isTakingDamage = false;
+            currentHealth -= damage;
+            //TODO:fix here later
+            //zombieAnim.maxHp = currentHealth / 20;
+        
+            //Debug.Log(currentHealth);
+            if (currentHealth <= 0)
+                Die();
         }
-    }
 
-    public void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-        zombieAnim.hp = currentHealth / 20;
-        //Debug.Log(currentHealth);
-        if (currentHealth <= 0)
-            Die();
-    }
+        protected void Die()
+        {
+            GetComponent<Collider2D>().enabled = false;
+            ZombieManager.instance.aliveZombies.Remove(this);
+            ZombieManager.instance.currentWaveZombies.Remove(this);
+            ZombieAnimManager.Manager.zombieAnimPool.Release(anim);
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½......
 
-    protected void Die()
-    {
-        GetComponent<Collider2D>().enabled = false;
-        ZombieManager.instance.aliveZombies.Remove(gameObject);
-        ZombieManager.instance.currentWaveZombies.Remove(gameObject);
-        //ËÀÍö±íÏÖ......
-
-        Destroy(gameObject);
+            Destroy(this.gameObject);
+        }
     }
 }

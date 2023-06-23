@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zombies;
 
 public class PotatoMine : Plant
 {
@@ -44,8 +45,10 @@ public class PotatoMine : Plant
 
     private void ReadyToExplode()
     {
-        potMineAnim.GetReady();
-        readyToExplode = true;
+        if (!readyToExplode) {
+            potMineAnim.GetReady();
+            readyToExplode = true;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -70,7 +73,7 @@ public class PotatoMine : Plant
             }
         }*/
         explodeArea.enabled = false;
-        //╠╛у╗╠Мож
+        //О©╫О©╫у╗О©╫О©╫О©╫О©╫
         potMineAnim.Explode();
 
         Invoke("DestroyGameObject", 1f);

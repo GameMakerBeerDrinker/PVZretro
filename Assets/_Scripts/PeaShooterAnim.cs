@@ -14,6 +14,7 @@ namespace _Scripts
         public float eyeYScale = 1f;
         public float speed = 1f;
 
+        public bool isAlarmed;
         public bool shootFlag;
         public Transform mouse;
         public Transform tail;
@@ -38,6 +39,8 @@ namespace _Scripts
         public int shootTimer;
 
         public void Start() {
+            bodyMesh.sortingLayerName = "Plant";
+            
             steamScales = new Vector3[4];
             for (int i = 0; i < 4; i++) {
                 steamScales[i] = steams[i].localScale;
@@ -55,6 +58,7 @@ namespace _Scripts
         public void SetDamagedFalse() {
             bodyMesh.material = isFrozenPea ? frozenNormalMat : normalMat;
         }
+        
 
         public void FixedUpdate() {
             body.localPosition = 0.5f * Mathf.Sin(Mathf.Deg2Rad * timer * speed) * Vector3.up;
@@ -112,13 +116,16 @@ namespace _Scripts
                 mouseYScale.ApproachRef(1f, 16f);
             }
 
-            eye.localScale = new Vector3(eye.localScale.x, eyeYScale / 2f, 0);
-            body.localScale = ((1f - mouseYScale) * 3f + 5f) * Vector3.one;
-            mouse.localScale = mouseYScale * mouseDefaultScale;
-            mouse.localPosition = (2.5f + mouseYScale * 1.2f) * Vector3.right;
-            
-            for (int i = 0; i < 4; i++) {
-                steams[i].localScale = steamScales[i] * (1.1f - mouseYScale / 3f);
+            if (isAlarmed) {
+                eye.localScale = new Vector3(eye.localScale.x, eyeYScale / 2f, 0);
+                body.localScale = ((1f - mouseYScale) * 3f + 5f) * Vector3.one;
+                body.rotation = Quaternion.Euler(Vector3.zero);
+                mouse.localScale = mouseYScale * mouseDefaultScale;
+                mouse.localPosition = (2.5f + mouseYScale * 1.2f) * Vector3.right;
+
+                for (int i = 0; i < 4; i++) {
+                    steams[i].localScale = steamScales[i] * (1.1f - mouseYScale / 3f);
+                }
             }
 
         }

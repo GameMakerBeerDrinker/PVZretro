@@ -209,6 +209,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6658940872938980918, guid: 153eda35ad07f6a45be54b09b9dabc37, type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6658940872938980919, guid: 153eda35ad07f6a45be54b09b9dabc37, type: 3}
       propertyPath: m_Name
       value: SunFlowerAnim

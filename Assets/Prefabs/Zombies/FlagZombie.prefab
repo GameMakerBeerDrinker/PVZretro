@@ -117,7 +117,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1900484345936020292}
-  - {fileID: 8729536524626029329}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -233,7 +232,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombieName: 1
-  zombieAnim: {fileID: 8943239255322227510}
+  zombieAnim: {fileID: 0}
+  armor: {fileID: 0}
+  brokenArmor: {fileID: 0}
   withArmor: 0
   armorHealth: 0
   bodyHealth: 0
@@ -243,92 +244,5 @@ MonoBehaviour:
   damage: 1
   isCold: 0
   coldTimer: 0
---- !u!1001 &723212406325486052
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 4931489693016576758}
-    m_Modifications:
-    - target: {fileID: 8299244530021845749, guid: 28f50c771ae8cba4badd1fcfc2d31f7d, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8299244530021845749, guid: 28f50c771ae8cba4badd1fcfc2d31f7d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8299244530021845749, guid: 28f50c771ae8cba4badd1fcfc2d31f7d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8299244530021845749, guid: 28f50c771ae8cba4badd1fcfc2d31f7d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8299244530021845749, guid: 28f50c771ae8cba4badd1fcfc2d31f7d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8299244530021845749, guid: 28f50c771ae8cba4badd1fcfc2d31f7d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8299244530021845749, guid: 28f50c771ae8cba4badd1fcfc2d31f7d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8299244530021845749, guid: 28f50c771ae8cba4badd1fcfc2d31f7d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8299244530021845749, guid: 28f50c771ae8cba4badd1fcfc2d31f7d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8299244530021845749, guid: 28f50c771ae8cba4badd1fcfc2d31f7d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8299244530021845749, guid: 28f50c771ae8cba4badd1fcfc2d31f7d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8299244530021845750, guid: 28f50c771ae8cba4badd1fcfc2d31f7d, type: 3}
-      propertyPath: m_Name
-      value: ZombieAnim
-      objectReference: {fileID: 0}
-    - target: {fileID: 8299244530396872680, guid: 28f50c771ae8cba4badd1fcfc2d31f7d, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: d460df86ad01300479d4bf5c490f1b7c, type: 3}
-    - target: {fileID: 8299244530396872680, guid: 28f50c771ae8cba4badd1fcfc2d31f7d, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: db6ba92cc63a632439c2fd8e545cdca7, type: 2}
-    - target: {fileID: 8508875718160077522, guid: 28f50c771ae8cba4badd1fcfc2d31f7d, type: 3}
-      propertyPath: body
-      value: 
-      objectReference: {fileID: 4931489693016576754}
-    - target: {fileID: 8508875718160077522, guid: 28f50c771ae8cba4badd1fcfc2d31f7d, type: 3}
-      propertyPath: bodyPos
-      value: 
-      objectReference: {fileID: 4931489693016576758}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 28f50c771ae8cba4badd1fcfc2d31f7d, type: 3}
---- !u!4 &8729536524626029329 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8299244530021845749, guid: 28f50c771ae8cba4badd1fcfc2d31f7d, type: 3}
-  m_PrefabInstance: {fileID: 723212406325486052}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8943239255322227510 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8508875718160077522, guid: 28f50c771ae8cba4badd1fcfc2d31f7d, type: 3}
-  m_PrefabInstance: {fileID: 723212406325486052}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 713dccdc75e300d4f8f95ec4a3c17976, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  parent: {fileID: 0}
+  anim: {fileID: 0}

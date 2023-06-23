@@ -55,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: -991891573
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 34c869e2959be5e41a8531295b7c5a5e, type: 3}
   m_Color: {r: 0.030562414, g: 0.69888544, b: 0.9528302, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -126,6 +126,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6413636292789366999}
     m_Modifications:
+    - target: {fileID: 523965617315299833, guid: d916dc17711b1f84db78ed5e7a064163, type: 3}
+      propertyPath: sprSnow
+      value: 
+      objectReference: {fileID: 21300000, guid: 34c869e2959be5e41a8531295b7c5a5e, type: 3}
+    - target: {fileID: 523965617315299833, guid: d916dc17711b1f84db78ed5e7a064163, type: 3}
+      propertyPath: particlePrefab
+      value: 
+      objectReference: {fileID: 3495591534382808863, guid: 3f55548d1aa9f27409394a5a06393e5e, type: 3}
+    - target: {fileID: 4670748468187143828, guid: d916dc17711b1f84db78ed5e7a064163, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 34c869e2959be5e41a8531295b7c5a5e, type: 3}
+    - target: {fileID: 4670748468187143828, guid: d916dc17711b1f84db78ed5e7a064163, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670748468187143828, guid: d916dc17711b1f84db78ed5e7a064163, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670748468187143828, guid: d916dc17711b1f84db78ed5e7a064163, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4670748468187143829, guid: d916dc17711b1f84db78ed5e7a064163, type: 3}
       propertyPath: m_RootOrder
       value: 0

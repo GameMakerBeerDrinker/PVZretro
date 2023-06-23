@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8299244529295674980}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.3, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 8299244530785779841}
   speed: 16
-  curX: 0
+  curX: 10
   curRot: {x: 0, y: 0, z: 0}
   rotFollow: 1
   ySwing: 1
@@ -166,17 +166,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713dccdc75e300d4f8f95ec4a3c17976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meshes:
+  - {fileID: 8299244530785779843}
+  - {fileID: 8299244530551552248}
+  - {fileID: 8299244529295674977}
+  - {fileID: 8299244530090518732}
+  - {fileID: 8299244530718534752}
   body: {fileID: 0}
+  armor: {fileID: 8299244530396872680}
+  armorSprites:
+  - {fileID: 0}
+  - {fileID: 21300000, guid: d460df86ad01300479d4bf5c490f1b7c, type: 3}
+  - {fileID: 21300000, guid: a9f6f8bc49dd8cd43ba053bdc8f1b9e9, type: 3}
+  - {fileID: 0}
+  - {fileID: 21300000, guid: cad0d29bb7776614cb7671039bc12b5d, type: 3}
+  - {fileID: 21300000, guid: 2f2802b224baed8458392e60be18f735, type: 3}
   timer: 0
   nextMoveTime: 0
-  nextXPos: 0
-  curXPos: 0
+  nextXPos: 10
+  curXPos: 10
   nextRandomRot: {x: 0, y: 0, z: 0}
   curRot: {x: 0, y: 0, z: 0}
   head: {fileID: 8299244530785779841}
   bloodPrefab: {fileID: 4753157653548527701, guid: e349e22d45378484483de30b1da872e0, type: 3}
   bloodCircle: []
-  hp: 0
+  maxHp: 0
+  curHp: 0
 --- !u!1 &8299244530090518735
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,7 +220,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8299244530090518735}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.7, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -226,11 +241,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 8299244529295674979}
   speed: 24
-  curX: 0
+  curX: 10
   curRot: {x: 0, y: 0, z: 0}
   rotFollow: 1
   ySwing: 1
-  oriY: -0.7
+  oriY: -0.3
 --- !u!33 &8299244530090518731
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -306,7 +321,7 @@ GameObject:
   - component: {fileID: 8299244530396872680}
   - component: {fileID: 8299244530396872695}
   m_Layer: 0
-  m_Name: Hat
+  m_Name: Armor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -334,7 +349,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8299244530396872682}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -368,7 +383,7 @@ SpriteRenderer:
   m_SortingLayerID: -991891573
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a9f6f8bc49dd8cd43ba053bdc8f1b9e9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cad0d29bb7776614cb7671039bc12b5d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -523,7 +538,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8299244530718534755}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.9, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -544,11 +559,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 8299244530090518734}
   speed: 32
-  curX: 0
+  curX: 10
   curRot: {x: 0, y: 0, z: 0}
   rotFollow: 1
   ySwing: 1
-  oriY: -0.9
+  oriY: -0.3
 --- !u!33 &8299244530718534767
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -621,7 +636,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8299244530785779841}
-  - component: {fileID: 8299244530785779840}
   - component: {fileID: 8299244530785779842}
   - component: {fileID: 8299244530785779843}
   - component: {fileID: 8299244530785779844}
@@ -640,7 +654,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8299244530785779845}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -648,29 +662,6 @@ Transform:
   m_Father: {fileID: 8299244530021845749}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8299244530785779840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8299244530785779845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 713dccdc75e300d4f8f95ec4a3c17976, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  body: {fileID: 0}
-  timer: 0
-  nextMoveTime: 0
-  nextXPos: 5
-  curXPos: 5
-  nextRandomRot: {x: 0, y: 0, z: 0}
-  curRot: {x: 0, y: 0, z: 0}
-  head: {fileID: 8299244530785779841}
-  bloodPrefab: {fileID: 4753157653548527701, guid: e349e22d45378484483de30b1da872e0, type: 3}
-  bloodCircle: []
-  hp: 10
 --- !u!33 &8299244530785779842
 MeshFilter:
   m_ObjectHideFlags: 0

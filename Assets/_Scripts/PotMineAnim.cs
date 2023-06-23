@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace _Scripts {
     public class PotMineAnim : MonoBehaviour {
@@ -37,7 +38,14 @@ namespace _Scripts {
             } else {
                 heart.transform.localScale =
                     Calc.ApproachValue(heart.transform.localScale, 3f * Vector3.one, 16f * Vector3.one);
-                heart.color = heart.color.Fade(16f);
+                heart.color = heart.color.Fade(32f);
+                var par = ParticleManager.Manager.peaParPool.Get();
+                float rand = 360f * Random.value;
+                for (int i = 0; i < 36; i++) {
+                    par.transform.position =
+                        transform.position + Calc.Deg2Dir3(rand + 10f * i) * heart.transform.localScale.x / 1.2f;
+                    par.spriteRenderer.color = Color.red;
+                }
             }
         }
     }

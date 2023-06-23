@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zombies;
 
 public abstract class DirectBullet : MonoBehaviour
 {
@@ -32,13 +33,13 @@ public abstract class DirectBullet : MonoBehaviour
         if(collision.tag=="Zombie")
         {
             float distanceBetweenBulletAndZombie = Mathf.Infinity;
-            GameObject takeDamageZombie = null;
-            foreach(GameObject zombie in ZombieManager.instance.aliveZombies)
+            Zombie takeDamageZombie = null;
+            foreach(Zombie zombie in ZombieManager.instance.aliveZombies)
             {
-                //½©Ê¬Óë×Óµ¯Í¬ÐÐ
+                //ï¿½ï¿½Ê¬ï¿½ï¿½ï¿½Óµï¿½Í¬ï¿½ï¿½
                 if(Mathf.Abs( zombie.transform.position.y-transform.position.y)<GameManager.instance.tilemap.cellSize.y/2)
                 {
-                    //ÕÒ×î½üµÄ½©Ê¬
+                    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½Ê¬
                     if(Mathf.Abs(zombie.transform.position.x-transform.position.x)<distanceBetweenBulletAndZombie)
                     {
                         distanceBetweenBulletAndZombie = Mathf.Abs(zombie.transform.position.x - transform.position.x);

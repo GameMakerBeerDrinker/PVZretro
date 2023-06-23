@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zombies;
 
 public abstract class Exploder : Plant
 {
@@ -40,7 +41,7 @@ public abstract class Exploder : Plant
         explodeArea.enabled = true;
         Debug.Log("explode");
 
-        //±¬Õ¨µÄ¶¯»­±íÏÖ......
+        //ï¿½ï¿½Õ¨ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½......
         Invoke("destory", 0.01f);
         
     }

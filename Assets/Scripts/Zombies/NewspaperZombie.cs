@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zombies;
 
 public class NewspaperZombie : Zombie
 {
@@ -33,7 +34,7 @@ public class NewspaperZombie : Zombie
 
     private void LosePaper()
     {
-        armor.GetComponent<SpriteRenderer>().sprite = mailEmpty;
+        anim.armor.sprite = mailEmpty;
         isMad = true;
         speed = 0;
         damage = 0;
@@ -42,7 +43,7 @@ public class NewspaperZombie : Zombie
 
     private void GetMad()
     {
-        armor.GetComponent<SpriteRenderer>().sprite = mail;
+        anim.armor.sprite = mail;
         speed = madSpeed;
         damage = madDamage;
     }

@@ -1,21 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using _Scripts;
 using UnityEngine;
+using Zombies;
 
 public class ZombieManager : MonoBehaviour
 {
     public static ZombieManager instance;
     public GameObject victoryReward;
 
-    public GameObject[] zombies;
+    public Zombie[] zombies;
 
     public Level currentLevel;
     private ZombieWave[] zombieWaves;
 
     [HideInInspector]
-    public List<GameObject> aliveZombies;
+    public List<Zombie> aliveZombies;
     [HideInInspector]
-    public List<GameObject> currentWaveZombies;
+    public List<Zombie> currentWaveZombies;
 
     private int waveNum;
     private int waveTotalHealth;
@@ -47,8 +49,7 @@ public class ZombieManager : MonoBehaviour
                     zombieCount++;
                 }
         }*/
-
-
+        
         zombieWaves = currentLevel.zombieWaves;
         refreshTimer = 0;
         waveNum = 0;
@@ -59,9 +60,9 @@ public class ZombieManager : MonoBehaviour
         refreshTimer++;
         //计算本波僵尸剩余血量
         currentTotalHealth = 0;
-        foreach(GameObject zombie in currentWaveZombies)
+        foreach(Zombie zombie in currentWaveZombies)
         {
-            currentTotalHealth += zombie.GetComponent<Zombie>().currentHealth;
+            currentTotalHealth += zombie.currentHealth;
         }
 
         //当时间到达最长波长，或当前波僵尸血量降至 刷新因子*总血量 以下，生成下一波僵尸
@@ -76,7 +77,7 @@ public class ZombieManager : MonoBehaviour
         //最后一波僵尸被消灭，过关。
         if(waveNum>=zombieWaves.Length&&aliveZombies.Count==0)
         {
-            victoryReward.SetActive(true);
+            victoryReward.gameObject.SetActive(true);
         }
     }
 
@@ -119,7 +120,13 @@ public class ZombieManager : MonoBehaviour
             Vector3 generatePosition = transform.position + linePosition + positionCorrect;
 
 
-            GameObject newZombie = Instantiate(zombies[(int)zombieWaves[waveNum].zombies[i]], generatePosition, Quaternion.Euler(0, 0, 0));
+            Zombie newZombie = Instantiate(zombies[(int)zombieWaves[waveNum].zombies[i]], generatePosition, Quaternion.Euler(0, 0, 0));
+            var anim = ZombieAnimManager.Manager.zombieAnimPool.Get();
+            newZombie.anim = anim;
+            anim.body = newZombie.gameObject;
+            anim.SetArmor(newZombie.zombieName);
+            
+            
             //生成一个僵尸时，把它加入存活僵尸列表，以供射手检测
             aliveZombies.Add(newZombie);
             //生成一个僵尸时，把它加入本波僵尸列表，用来获得本波僵尸当前血量

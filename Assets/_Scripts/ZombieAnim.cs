@@ -3,11 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using _Scripts;
 using UnityEngine;
+using Zombies;
 using Random = UnityEngine.Random;
 
 public class ZombieAnim : MonoBehaviour {
-
+    public MeshRenderer[] meshes;
     public GameObject body;
+    public SpriteRenderer armor;
+    public Sprite[] armorSprites;
 
     public int timer;
     public int nextMoveTime;
@@ -19,38 +22,46 @@ public class ZombieAnim : MonoBehaviour {
     public Transform bloodPrefab;
     public Transform[] bloodCircle;
 
-    public int hp;
+    public int maxHp;
+    public int curHp;
 
     private void Start() {
-        bloodCircle = new Transform[hp];
-        for (int i = 0; i < 10; i++) {
+        foreach (var mesh in meshes) {
+            mesh.sortingLayerName = "Zombie";
+        }
+
+        bloodCircle = new Transform[maxHp];
+        for (int i = 0; i < maxHp; i++) {
             bloodCircle[i] = Instantiate(bloodPrefab, transform);
-            bloodCircle[i].transform.localPosition = 1f * Calc.Deg2Dir3(i * 36f);
+            bloodCircle[i].transform.localPosition = 1f * Calc.Deg2Dir3(i * 360f / maxHp);
         }
     }
 
+
+    public void SetArmor(ZombieName name) {
+        armor.sprite = armorSprites[(int)name];
+    }
     public void RefreshBlood() {
-        for (int i = 0; i < hp; i++) {
-            bloodCircle[i].transform.position = transform.position + 1f * Calc.Deg2Dir3(i * 360f*20/body.GetComponent<Zombie>().maxhealth + 2f * timer);
+        for (int i = 0; i < curHp; i++) {
+            bloodCircle[i].transform.position = transform.position + 1f * Calc.Deg2Dir3(i * 360f / maxHp + 2f * timer);
         }
 
-        for (int i = hp; i < 10; i++) {
+        for (int i = curHp; i < maxHp; i++) {
             bloodCircle[i].transform.position = transform.position;
         }
     }
-
-
-
-    private void Update() {
-        //if(Input.anyKeyDown) hp--;
-    }
+    
     private void FixedUpdate() {
-        RefreshBlood();
+        //RefreshBlood();
         Movement();
         timer++;
     }
 
     private void Movement() {
+        if (body == null) {
+            ZombieAnimManager.Manager.zombieAnimPool.Release(this);
+        }
+        
         if (timer == nextMoveTime) {
             nextXPos = body.transform.position.x;
             nextMoveTime += Random.Range(100, 150);
@@ -61,6 +72,6 @@ public class ZombieAnim : MonoBehaviour {
         curXPos.ApproachRef(nextXPos, 64f);
         
         head.transform.rotation = Quaternion.Euler(curRot);
-        head.transform.position = new Vector3(curXPos, head.transform.position.y, 0f);
+        head.transform.position = new Vector3(curXPos, body.transform.position.y, 0f);
     }
 }

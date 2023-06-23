@@ -11,7 +11,7 @@ namespace _Scripts {
             sprRenderer.color = sprRenderer.color.Fade(32f);
 
             if (sprRenderer.color.a.Equal(0f, 0.01f)) {
-                RainManager.Manager.ripplePool.Release(this);
+                ParticleManager.Manager.ripplePool.Release(this);
             }
         }
     }
