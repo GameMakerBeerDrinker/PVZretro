@@ -30,10 +30,10 @@ namespace _Scripts {
 
         private void FixedUpdate() {
             shield.transform.rotation = Quaternion.Euler(Time.time * -10f, Time.time * -20f, Time.time * 30f);
-            core.transform.position = (2f + 0.5f * Mathf.Sin(100f * Time.time * Mathf.Deg2Rad)) * Vector3.up;
+            core.transform.localPosition = (2f + 0.5f * Mathf.Sin(100f * Time.time * Mathf.Deg2Rad)) * Vector3.up;
             if (isTakingDamage) {
                 shield.transform.rotation = Quaternion.Euler(0,Time.time * -200f , 0);
-                core.transform.position = (2f + 0.1f * Mathf.Sin(100f * Time.time * 5f * Mathf.Deg2Rad)) * Vector3.up;
+                core.transform.localPosition = (2f + 0.1f * Mathf.Sin(100f * Time.time * 5f * Mathf.Deg2Rad)) * Vector3.up;
             }
             core.color = Color.HSVToRGB((float)curHp / maxHp * 0.28f, 1f, 1f);
 

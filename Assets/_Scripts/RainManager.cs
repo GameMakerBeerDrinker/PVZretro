@@ -14,6 +14,8 @@ public class RainManager : MonoBehaviour {
 
     public List<SpriteRenderer> rains;
     public ObjectPool<RippleCtrl> ripplePool;
+
+    public Transform rainFather;
     
     public static RainManager Manager;
 
@@ -27,9 +29,8 @@ public class RainManager : MonoBehaviour {
     }
 
     public void Start() {
-        ripplePool = new ObjectPool<RippleCtrl>(() => {
-            return Instantiate(ripplePrefab); 
-        }, p => {
+        ripplePool = new ObjectPool<RippleCtrl>(() => Instantiate(ripplePrefab,rainFather), 
+            p => {
             p.gameObject.SetActive(true);
             p.transform.localScale = Vector3.zero;
             p.sprRenderer.color = p.sprRenderer.color.SetAlpha(1f);
@@ -42,7 +43,7 @@ public class RainManager : MonoBehaviour {
     
     public void FixedUpdate() {
         if (timer % 10 == 0 && timer <= 1000) {
-            var ins = Instantiate(rainPrefab, transform);
+            var ins = Instantiate(rainPrefab, rainFather);
             ins.transform.position = Random.Range(-10f, 10f) * Vector3.right + 10f * Vector3.up;
             ins.transform.localScale = Random.Range(0.5f, 1.5f) * (Vector3.right + Vector3.up);
             ins.color = ins.color.SetAlpha(Random.Range(0.3f, 0.6f));
