@@ -23,7 +23,7 @@ public class Follow : MonoBehaviour {
         if (ySwing)
             transform.position = new Vector3(curX,
                 parent.transform.position.y + oriY + 0.1f * Mathf.Sin(Time.time * 5f), 0f);
-        else transform.position = new Vector3(curX, transform.position.y, 0f);
+        else transform.position = new Vector3(curX, parent.transform.position.y, 0f);
         if(rotFollow) transform.rotation = Quaternion.Euler(curRot);
     }
 }

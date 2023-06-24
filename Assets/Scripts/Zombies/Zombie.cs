@@ -17,8 +17,7 @@ namespace Zombies {
     public abstract class Zombie : MonoBehaviour
     {
         public ZombieName zombieName;
-
-        public ZombieAnim zombieAnim;
+        
         public GameObject armor;
         public Material brokenArmor;
 
@@ -45,8 +44,9 @@ namespace Zombies {
         private void Start()
         {
             currentHealth = maxhealth;
-            //TODO:here also
-            //zombieAnim.maxHp = currentHealth / 20;
+            //anim.maxHp = currentHealth / 20;
+            //anim.curHp = anim.maxHp;
+            //anim.InitBlood();
             halfspeed = speed / 2;
             halfdamage = damage * 1f / 2;
         }
@@ -118,8 +118,7 @@ namespace Zombies {
         public void TakeDamage(int damage)
         {
             currentHealth -= damage;
-            //TODO:fix here later
-            //zombieAnim.maxHp = currentHealth / 20;
+            //anim.curHp = currentHealth / 20;
         
             //Debug.Log(currentHealth);
             if (currentHealth <= 0)
@@ -134,7 +133,15 @@ namespace Zombies {
             ZombieAnimManager.Manager.zombieAnimPool.Release(anim);
             //��������......
 
-            Destroy(this.gameObject);
+            for (int i = 0; i < 36; i++) {
+                var par = ParticleManager.Manager.peaParPool.Get();
+                par.transform.position = this.transform.position + 1f * Calc.Deg2Dir3(i * 10f);
+                par.spriteRenderer.color = Color.red;
+            }
+            /*this.transform.localScale
+                = this.transform.localScale.ApproachValue(Vector3.zero, 16f * Vector3.one);
+            if(this.transform.localScale.x.Equal(0f,0.1f))
+                Destroy(this.gameObject);*/
         }
     }
 }
