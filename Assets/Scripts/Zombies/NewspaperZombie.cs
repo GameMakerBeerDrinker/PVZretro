@@ -5,12 +5,18 @@ using Zombies;
 
 public class NewspaperZombie : Zombie
 {
-    public Sprite mailEmpty, mail;
+    public Sprite mailEmpty, mail,mailfull;
 
     public float madSpeed;
     public int madDamage;
     public float stunTime;
     private bool isMad;
+
+    protected new void Start()
+    {
+        base.Start();
+        anim.armor.sprite = mailfull;
+    }
 
     private void Update()
     {

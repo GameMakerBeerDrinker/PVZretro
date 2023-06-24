@@ -41,7 +41,7 @@ namespace Zombies {
         public GameObject parent;
         public ZombieAnim anim;
 
-        private void Start()
+        protected void Start()
         {
             currentHealth = maxhealth;
             //anim.maxHp = currentHealth / 20;

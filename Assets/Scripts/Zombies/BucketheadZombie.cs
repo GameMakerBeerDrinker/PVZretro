@@ -5,5 +5,10 @@ using Zombies;
 
 public class BucketheadZombie : Zombie
 {
-    
+    public Sprite sprite;
+    protected new void Start()
+    {
+        base.Start();
+        anim.armor.sprite = sprite;
+    }
 }

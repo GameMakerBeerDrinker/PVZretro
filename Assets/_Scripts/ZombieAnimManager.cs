@@ -22,9 +22,13 @@ namespace _Scripts {
             zombieAnimPool = new ObjectPool<ZombieAnim>(
                 () => Instantiate(zombieAnimPrefab, transform),
                 p => {
+                    p.curXPos = 20f;
+                    p.nextXPos = 20f;
                     p.gameObject.SetActive(true);
                 }, p => {
                     p.body = null;
+                    p.curXPos = 20f;
+                    p.nextXPos = 20f;
                     p.gameObject.SetActive(false);
                 }, p => {
                     Destroy(p.gameObject);

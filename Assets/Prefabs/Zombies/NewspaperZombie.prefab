@@ -232,7 +232,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombieName: 0
-  zombieAnim: {fileID: 0}
   armor: {fileID: 0}
   brokenArmor: {fileID: 2100000, guid: db6ba92cc63a632439c2fd8e545cdca7, type: 2}
   withArmor: 1
@@ -248,6 +247,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   mailEmpty: {fileID: 21300000, guid: 2f20bc16f68dc43499b96bc13b6728da, type: 3}
   mail: {fileID: 21300000, guid: 1c44989d4310aa54789c8a051d6c025b, type: 3}
+  mailfull: {fileID: 21300000, guid: 2f2802b224baed8458392e60be18f735, type: 3}
   madSpeed: 0.6
   madDamage: 3
   stunTime: 1

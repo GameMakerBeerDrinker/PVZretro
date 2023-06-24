@@ -148,7 +148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombieName: 2
-  zombieAnim: {fileID: 0}
   armor: {fileID: 0}
   brokenArmor: {fileID: 2100000, guid: eec89de271ec1d94184c1697aaf57dd6, type: 2}
   withArmor: 1
@@ -162,6 +161,7 @@ MonoBehaviour:
   coldTimer: 0
   parent: {fileID: 0}
   anim: {fileID: 0}
+  sprite: {fileID: 21300000, guid: a9f6f8bc49dd8cd43ba053bdc8f1b9e9, type: 3}
 --- !u!1 &9026782683601157519
 GameObject:
   m_ObjectHideFlags: 0

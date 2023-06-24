@@ -15,6 +15,7 @@ public class PotatoMine : Plant
     public int drillOutTime;
     protected int drillOutTimer;
     private bool readyToExplode;
+    private bool exploded;
 
     public int damage;
 
@@ -51,11 +52,12 @@ public class PotatoMine : Plant
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.tag=="Zombie"&&readyToExplode)
+        if(collision.tag=="Zombie"&&readyToExplode&&!exploded)
         {
             collision.GetComponent<Zombie>().TakeDamage(damage);
+            exploded = true;
             Explode();
         }
     }
