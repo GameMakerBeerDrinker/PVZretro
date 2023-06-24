@@ -16,7 +16,8 @@ public abstract class Nut : Plant
 
     protected InjureState injureState;
 
-    private void Start() {
+    private new void Start() {
+        base.Start();
         walNutAnim.SetCurHpPercentage(100);
     }
     private new void FixedUpdate()
