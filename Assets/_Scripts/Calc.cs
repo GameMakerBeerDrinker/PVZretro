@@ -124,6 +124,11 @@ namespace _Scripts {
             current.a = ApproachValue(current.a, 1, rate);
             return current;
         }
+        
+        public static Color ApproachAlpha(this Color current, float target,float rate) {
+            current.a = ApproachValue(current.a, target, rate);
+            return current;
+        }
 
         public static Color SetAlpha(this Color current, float alpha) {
             if (alpha > 1f) alpha = 1f;
