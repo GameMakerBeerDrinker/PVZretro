@@ -18,7 +18,7 @@ namespace _Scripts {
                 3f * Vector3.right + (3f - Mathf.Abs(0.5f * Mathf.Sin(5f * timer * Mathf.Deg2Rad) - 0.2f)) * Vector3.up;
             
             transform.localScale =
-                Calc.ApproachValue(transform.localScale, 3f * Vector3.one, 16f * Vector3.one);
+                Calc.ApproachValue(transform.localScale, 3f * Vector3.one, 24f * Vector3.one);
             float rand = 360f * Random.value;
             for (int i = 0; i < 6; i++) {
                 for (int j = 0; j < 2; j++) {
@@ -30,7 +30,7 @@ namespace _Scripts {
             }
 
             foreach (var i in fadeSprites) {
-                i.color = i.color.Fade(8f);
+                i.color = i.color.Fade(16f);
             }
 
             if (fadeSprites[0].color.a.Equal(0f, 0.1f)) {
